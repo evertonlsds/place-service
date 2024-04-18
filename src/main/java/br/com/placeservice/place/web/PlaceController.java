@@ -1,6 +1,5 @@
 package br.com.placeservice.place.web;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,7 +21,7 @@ public class PlaceController {
     }
 
     @PostMapping
-    public ResponseEntity<Mono<Place>> create(Place place){
+    public ResponseEntity<Mono<Place>> create(Place place) {
         var createdPlace = placeService.create(place);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdPlace);
     }
