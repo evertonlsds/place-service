@@ -7,7 +7,7 @@ import br.com.placeservice.place.domain.PlaceRepository;
 import br.com.placeservice.place.domain.PlaceService;
 
 @Configuration
-public class placeConfig {
+public class PlaceConfig {
 
     @Bean
     PlaceService placeService(PlaceRepository placeRepository){
