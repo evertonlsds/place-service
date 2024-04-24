@@ -4,6 +4,6 @@ CREATE TABLE IF NOT EXISTS place (
   slug varchar(255) not null,
   state varchar(255) not null,
   created_at timestamp ,
-  updated_at timestamp
+  updated_at timestamp 
 );
  
