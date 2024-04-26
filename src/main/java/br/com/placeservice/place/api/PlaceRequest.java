@@ -1,9 +1,8 @@
 package br.com.placeservice.place.api;
 
-import java.time.LocalDateTime;
+import jakarta.validation.constraints.NotBlank;
 
 public record PlaceRequest(
-    String name, String slug, String city, String state, LocalDateTime createdAt, LocalDateTime updateAt
-) {
-    
+       @NotBlank String name, @NotBlank String state) {
+
 }

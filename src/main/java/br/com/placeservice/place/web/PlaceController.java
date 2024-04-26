@@ -11,6 +11,7 @@ import br.com.placeservice.place.api.PlaceRequest;
 import br.com.placeservice.place.api.PlaceResponse;
 
 import br.com.placeservice.place.domain.PlaceService;
+import jakarta.validation.Valid;
 import reactor.core.publisher.Mono;
 
 @RestController
@@ -24,7 +25,7 @@ public class PlaceController {
     }
 
     @PostMapping
-    public ResponseEntity<Mono<PlaceResponse>> create(@RequestBody PlaceRequest request) {
+    public ResponseEntity<Mono<PlaceResponse>> create(@Valid @RequestBody PlaceRequest request) {
 
         var placeResponse = placeService.create(request).map(PlaceMapper::fromPlaceResponse);
         return ResponseEntity.status(HttpStatus.CREATED).body(placeResponse);

@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS place (
   name varchar(255) not null,
   slug varchar(255) not null,
   state varchar(255) not null,
-  created_at timestamp ,
-  updated_at timestamp 
+  created_at timestamp not null,
+  updated_at timestamp not null
 );
  
